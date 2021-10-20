@@ -1,34 +1,105 @@
+/* 1. General Css*/
 body {
     margin: 0;
+    background-color: rgb(10, 96, 168);
+    font-family: 'Dancing', cursive;
+    text-align: center;
 }
 
 
 #mainContainer {
+    background-color: rgb(10, 96, 168);
     display: flex;
     flex-direction: column;
     width: auto;
     height: 100vh;
-    background-color: blue;
     justify-content: space-around;
 }
 
-#bottomMenu {
-    height: 10vh;
+@font-face {
+    font-family: 'Dancing';
+    src: url('/fonts/DancingScript-VariableFont_wght.ttf');
 }
 
+/* 2. Draw container  */
 #drawContainer {
     height: 90vh;
-    display:flex;
+    display: flex;
     flex-flow: column;
-    
-}
+    background-color: white;
+    margin: 5vh;
 
-.l2Cont {
-    border: 5px solid red;
 }
 
 .pixel {
-     border: 1px solid greenyellow;
+    border: 1px solid greenyellow;
     flex-grow: 1;
     display: flex;
 }
+
+/*3. Bottom menu  */
+#bottomMenu {
+    display: flex;
+    background-color: rgb(200, 50, 100);
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: clamp(8px, 4vw, 200px);
+    white-space: nowrap;
+    color: blanchedalmond;
+}
+
+
+#rightBottomMenu {
+    display: flex;
+    gap: 5vh;
+    align-items: center;
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+    width: 10vh;
+    height: 10vh;
+    align-items: center;
+}
+
+
+#colorPick {
+    min-width: 1vh;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* making reversed column for grid size dropdown values */
+.dropdownMenu {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.dropdown-content {
+    bottom: 10vh;
+    display: none;
+    position: absolute;
+}
+
+.dropdownMenu:hover .dropdown-content {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.text {
+    font-size: clamp(2px, 1.3vw, 200px);
+    display: flex;
+    justify-content: center;
+}
+
+input[type="color"] {
+    border-radius: 2;
+    border: none;
+}
+
+
+/*-------------------*/

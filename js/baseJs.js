@@ -1,5 +1,4 @@
-const drawContainer = findElement("#drawContainer");
-// shortem querrySelector
+// Shorten querrySelector
 function findElement(selector, all = false) {
     if (all) {
         return document.querySelectorAll(selector);
@@ -12,17 +11,26 @@ function createNode(element = "div", cssCLass = "pixel") {
     div.classList.add('pixel');
     return div;
 };
-//Drawing field 
-function drawField(num) {
+// Drawing field with divs
+function drawGrid(num) {
     for (let i = num; i > 0; i--) {
         let pixel = createNode('div');
         for (let y = num * 2; y > 0; y--) {
             pixel.append(createNode("div"))
         }
-        drawContainer.append(pixel);
+        findElement("#drawContainer").append(pixel);
     }
 }
+
+function defaultGrid() {
+    drawContainer.innerText = "";
+    drawGrid(16);
+}
+
+function zIndex(nodelist, hide = 0) {
+    nodelist.forEach(element => {
+        element.style.zIndex = hide;
+    });
+}
+
 //----------------------------------------------------------
-
-
-drawField(64)
