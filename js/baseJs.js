@@ -28,7 +28,7 @@ function drawGrid(num) {
 };
 // Draw new grid in the drawContainer and add mouseover events with a change to the bg color
 function newGrid(size = 16) {
-    drawContainer.innerText = '';
+    findElement("#drawContainer").innerText = '';
     drawGrid(size);
     changeBgcolor('black')
 };
