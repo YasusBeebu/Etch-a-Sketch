@@ -6,7 +6,6 @@ body {
     text-align: center;
 }
 
-
 #mainContainer {
     background-color: rgb(10, 96, 168);
     display: flex;
@@ -28,13 +27,20 @@ body {
     flex-flow: column;
     background-color: white;
     margin: 5vh;
+    border-radius: 10px;
 
 }
 
-.pixel {
-    border: 1px solid greenyellow;
+.row .rowCell {
     flex-grow: 1;
+    border-color: green;
+    border-width: 1px;
+}
+
+.row {
     display: flex;
+    flex-grow: 1;
+    border-color: green;
 }
 
 /*3. Bottom menu  */
@@ -51,7 +57,6 @@ body {
     color: blanchedalmond;
 }
 
-
 #rightBottomMenu {
     display: flex;
     gap: 5vh;
@@ -65,7 +70,6 @@ body {
     height: 10vh;
     align-items: center;
 }
-
 
 #colorPick {
     min-width: 1vh;

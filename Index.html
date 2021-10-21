@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/baseCss.css">
 </head>
 
-<body>
+<body onload="newGrid(16)">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -22,25 +22,29 @@
         <div id="drawContainer" class="contBasic">
 
         </div>
-        <div id="bottomMenu" class="contBasic">
+        <div id="bottomMenu" class="contBasic" >
             <div class="leftBottomMenu">
                 <div class="text" id="logo">Etch A Sketch</div>
             </div>
             <div id="rightBottomMenu" class="contBasic">
 
                 <div class="dropdownMenu">
-                    <button type="button" class="button text" id="mainButton">16</button>
+                    <button type="button" class="button text grid" onclick="newGrid(16)">16</button>
                     <div class="dropdown-content">
-                        <button type="button" class="button buttonHide text" id="one"><div class="text">32</div></button>
-                        <button type="button" class="button buttonHide text" id="two"><div class="text">64</div></button>
-                        <button type="button" class="button buttonHide text" id="three"><div class="text">128</div></button>
+                        <button type="button" class="button buttonHide text grid" onclick="newGrid(32)">32</button>
+                        <button type="button" class="button buttonHide text grid" onclick="newGrid(64)">64</button>
+                        <button type="button" class="button buttonHide text grid" onclick="newGrid(128)">128</button>
                     </div>
 
                 </div>
 
-                <button type="button" class="button" id="reset"><div class="text">Clear</div></button>
-                <button type="button" class="button" id="erase"><div class="text">Eraser</div></button>
-                <input type="color"  class="button text" id="colorPick">
+                <button type="button" class="button" id="reset" onclick="newGrid(16)">
+                    <div class="text">Clear</div>
+                </button>
+                <button type="button" class="button" id="erase" onclick="changeBgcolor('white')">
+                    <div class="text">Eraser</div>
+                </button>
+                <input type="color" class="button text" id="colorPick" oninput="changeBgcolor(this.value)">
             </div>
 
 
