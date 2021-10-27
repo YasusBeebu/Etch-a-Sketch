@@ -84,6 +84,7 @@ body {
 }
 
 .dropdown-content {
+    z-index: 20;
     bottom: 10vh;
     display: none;
     position: absolute;
@@ -105,5 +106,16 @@ input[type="color"] {
     border: none;
 }
 
+#antiDraw {
+    z-index: 10;
+    margin-top: -15vh;
+    background: transparent;
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+}
 
+#rainbow {
+    font-size: clamp(2px, 1vw, 200px);
+}
 /*-------------------*/
