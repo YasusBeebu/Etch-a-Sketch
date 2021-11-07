@@ -37,7 +37,7 @@ function newGrid(size = 16) {
 };
 
 // Instead of removing tons of events from elements, we simply draw transparent div to block drawing.
-function allowDraw(allow = true) { 
+function allowDraw(allow = true) {
     const antiDrawCont = findElement('#antiDraw');
 
     if (!allow) {
@@ -49,14 +49,14 @@ function allowDraw(allow = true) {
 // Add event to change the color of grid cells element
 function changeBgcolor(bgColor = "black", random = false) {
     const grid = findElement('.rowCell', 1); // find gridCells
-    
+
     grid.forEach(element => {
         element.addEventListener('mouseover', function main() {
             if (random) {
-                let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
                 element.style.backgroundColor = randomColor;
-            } else  element.style.backgroundColor = bgColor;
-           
+            } else element.style.backgroundColor = bgColor;
+
         });
     });
 };
