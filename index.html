@@ -23,7 +23,7 @@
         <div id="drawContainer" class="contBasic"></div>
         <div id="bottomMenu" class="contBasic">
             <div class="leftBottomMenu">
-                <div class="text" id="logo">Etch A Sketch</div>
+                <div class="" id="logo">Etch A Sketch</div>
             </div>
             <div id="rightBottomMenu" class="contBasic">
                 <div class="dropdownMenu">
@@ -33,13 +33,13 @@
                         <button type="button" class="button buttonHide text grid" onclick="newGrid(64)">64</button>
                         <button type="button" class="button buttonHide text grid" onclick="newGrid(128)">128</button>
                     </div>
-                </div><button type="button" class="button"  onclick="changeBgcolor('white', 'rainbow')">
+                </div><button type="button" class="button text" onclick="changeBgcolor('white', 'rainbow')">
                     <div class="text" id="rainbow">Rainbow</div>
                 </button>
-                <button type="button" class="button" id="reset" onclick="newGrid(16)">
+                <button type="button" class="button text" id="reset" onclick="newGrid(16)">
                     <div class="text">Clear</div>
                 </button>
-                <button type="button" class="button" id="erase" onclick="changeBgcolor('white')">
+                <button type="button" class="button text" id="erase" onclick="changeBgcolor('white')">
                     <div class="text">Eraser</div>
                 </button>
                 <input type="color" class="button text" id="colorPick" oninput="changeBgcolor(this.value)">
